@@ -1,0 +1,94 @@
+.AdminSider {
+    width: 250px !important;
+    max-width: 250px !important;
+    flex: 0 0 250px !important;
+    min-height: 100vh;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+    .logo-vertical {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+            transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), margin 0.3s, color 0.3s;
+            opacity: 1;
+
+            &>p {
+                &:first-child {
+                    font-weight: bold;
+                }
+
+                &:last-child {
+                    font-size: 0.8rem;
+                    font-style: italic;
+                    color: #a9a9a9;
+                }
+            }
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #FFFFFF;
+
+        &>.ant-menu-item {
+            width: 85%;
+            max-width: 210px;
+            height: 55px;
+
+            &>span {
+                color: #a7a7a7;
+            }
+        }
+
+        .ant-menu-item-selected {
+            &>svg {
+                color: #FFFFFF !important;
+            }
+
+            &>span {
+                color: #FFFFFF;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.AdminSider.ant-layout-sider-collapsed {
+    flex: 0 0 80px !important;
+    max-width: 80px !important;
+    min-width: 80px !important;
+    width: 80px !important;
+
+    .logo-vertical {
+        &>div {
+            display: none;
+            opacity: 0;
+        }
+    }
+
+    ul {
+        &>li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+
+            &>span:last-child {
+                display: none;
+            }
+        }
+    }
+}

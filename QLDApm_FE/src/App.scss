@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Lora', serif;
+  line-height: 1.4;
+  font-size: 16px;
+  word-spacing: 0.025rem;
+}
+
+body {
+  --COLOR-pink: #ffc0cb;
+  --COLOR-pink-smooth: #ffb0bde6;
+  --COLOR-pink-deep: #ffb0bd;
+  --COLOR-pink-super-deep: #fb7474;
+  --COLOR-pink-hover: #fd8fa1;
+  --COLOR-brown: #886060;
+  --COLOR-brown-smooth: #c75d26;
+  --COLOR-brown-deep: #a74017;
+  --COLOR-brown-super-deep: #6e3c23;
+  --COLOR-brown-hover: #e56266;
+  --COLOR-blue: #2200ff;
+  --COLOR-blue-hover: #1877f2;
+  --COLOR-black: #000000;
+  --COLOR-gray: #00000066;
+  --COLOR-gray-deep: #9c9c9c;
+  --COLOR-gray-super-deep: #757575;
+  --COLOR-primary: #ff5722;
+  --COLOR-primary-hover: #e64a19;
+  --COLOR-submit: #4CAF50;
+  --COLOR-submit-hover: #47d44b;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+  }
+
+  .container-wrapper {
+    padding: 0 240px;
+    width: 100%;
+    max-width: 2720px;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    color: var(--COLOR-black);
+
+    &:hover {
+      color: var(--COLOR-black);
+      opacity: 0.6;
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #757575;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media only screen and (max-width: 1084px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+}

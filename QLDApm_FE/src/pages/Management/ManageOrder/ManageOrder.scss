@@ -1,0 +1,119 @@
+.manage-order-container {
+  padding: 24px;
+  background-color: #f4f4f4;
+
+  .ant-table {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .ant-table-thead>tr>th {
+      background-color: #e8f4ff;
+      color: #0050b3;
+      font-weight: bold;
+      padding: 16px;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    .ant-table-tbody>tr>td {
+      padding: 12px;
+      text-align: left;
+      color: #595959;
+    }
+  }
+
+  .pagination-container {
+    margin-top: 20px;
+    text-align: right;
+
+    .ant-pagination-item {
+      border-radius: 5px;
+    }
+
+    .ant-pagination-item-active {
+      background-color: #0050b3;
+      color: #ffffff;
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .ant-btn-primary {
+      background-color: #52c41a;
+      border-color: #52c41a;
+
+      &:hover {
+        background-color: #73d13d;
+        border-color: #73d13d;
+      }
+    }
+
+    .ant-btn-default {
+      background-color: #faad14;
+      border-color: #faad14;
+
+      &:hover {
+        background-color: #ffc53d;
+        border-color: #ffc53d;
+      }
+    }
+
+    .ant-btn-danger {
+      background-color: #ff4d4f;
+      border-color: #ff4d4f;
+
+      &:hover {
+        background-color: #ff7875;
+        border-color: #ff7875;
+      }
+    }
+  }
+
+  // Responsive Design for mobile and smaller screens
+  @media (max-width: 768px) {
+    padding: 16px;
+
+    .ant-table-thead>tr>th,
+    .ant-table-tbody>tr>td {
+      font-size: 14px;
+      padding: 8px;
+    }
+
+    .action-buttons {
+      flex-direction: column;
+      gap: 8px;
+
+      .ant-btn {
+        width: 100%;
+      }
+    }
+
+    .pagination-container {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 12px;
+
+    .ant-table-thead>tr>th,
+    .ant-table-tbody>tr>td {
+      font-size: 12px;
+      padding: 6px;
+    }
+
+    .action-buttons {
+      flex-direction: column;
+      gap: 6px;
+
+      .ant-btn {
+        width: 100%;
+        font-size: 12px;
+      }
+    }
+  }
+}

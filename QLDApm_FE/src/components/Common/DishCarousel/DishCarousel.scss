@@ -1,0 +1,46 @@
+.DishCarousel {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2%;
+
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+
+    .carousel-slide {
+      display: flex;
+      width: 100%;
+    }
+
+    .dish {
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .dish img {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: calc(50% - 32px);
+    border: none;
+    color: var(--COLOR-pink-super-deep);
+    cursor: pointer;
+  }
+
+  .carousel-button.left {
+    left: 0;
+  }
+
+  .carousel-button.right {
+    right: 0;
+  }
+}

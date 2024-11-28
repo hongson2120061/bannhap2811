@@ -1,0 +1,53 @@
+.EditableTable {
+    .ant-table-body {
+        table {
+            tbody {
+                tr {
+                    td {
+                        .btn-wrapper {
+                            display: flex;
+                            justify-content: center;
+
+                            &>button {
+                                border: none;
+
+                                &:first-child {
+                                    svg {
+                                        color: rgb(51, 51, 227);
+                                        margin-right: 15px;
+
+                                        &:hover {
+                                            opacity: 0.6;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+
+                                &:last-child {
+                                    svg {
+                                        color: rgb(232, 40, 40);
+
+                                        &:hover {
+                                            opacity: 0.6;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        td {
+                            .btn-wrapper {
+                                button {
+                                    background-color: #fafafa;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

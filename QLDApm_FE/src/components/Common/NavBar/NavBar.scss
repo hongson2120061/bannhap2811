@@ -1,0 +1,141 @@
+.NavBar {
+  position: absolute;
+  align-items: flex-end;
+  top: 15px;
+  left: 0;
+  right: 0;
+  z-index: 150;
+  color: #ffffff;
+
+  .brand {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+
+  .nav-d {
+    display: flex;
+    flex-direction: row;
+
+    &>p {
+      margin-right: 25px;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1.1rem;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+
+    .selected {
+      color: var(--COLOR-primary) !important;
+
+      &:hover {
+        opacity: 1;
+        cursor: default;
+      }
+    }
+  }
+
+  .user-f {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    .user-name {
+      font-weight: bold;
+      margin-right: 20px;
+      color: #FFFFFF;
+
+      &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+
+    &>div {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+
+      &:first-child {
+        .SearchBar {
+          .search-icon {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    &>svg {
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+
+    .menu {
+      margin-left: 30px;
+      color: #FFFFFF;
+      display: none;
+    }
+  }
+
+  &.h {
+    color: #000000;
+
+    .brand {
+      color: #000000;
+    }
+
+    .nav-d {
+      &>p {
+        color: #000000;
+      }
+
+      .selected {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .NavBar {
+    .brand {
+      font-size: 16px;
+    }
+
+    .user-f {
+      .user-f-action {
+        display: none;
+      }
+
+      .menu {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .NavBar {
+    .user-f {
+      .menu {
+        display: flex;
+      }
+    }
+  }
+}

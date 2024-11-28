@@ -1,0 +1,90 @@
+.order-details {
+  flex-grow: 1;
+  min-width: 285px;
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #343c6a;
+  }
+  .order-detail-container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    .card {
+      border-radius: 10px;
+      background-color: white;
+      padding: 20px;
+      h2 {
+        color: #2d2d2d;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    }
+
+    .order-history {
+      .order-history-item {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        .order-history-content {
+          h3 {
+            color: #232323;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.16px;
+          }
+          p {
+            color: #718ebf;
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 0.1px;
+          }
+        }
+      }
+    }
+    .bill-details {
+      .bill-details-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .bill-details-item {
+          display: flex;
+          justify-content: space-between;
+          .name {
+            color: #718ebf;
+            font-size: 12px;
+            font-weight: 500;
+          }
+          .value {
+            color: #2d2d2d;
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .total-bill {
+        display: flex;
+        justify-content: space-between;
+        .name {
+          .text {
+            color: #2d2d2d;
+            font-size: 16px;
+            font-weight: 600;
+          }
+          .subtext {
+            color: #718ebf;
+            font-size: 9px;
+            font-weight: 500;
+          }
+        }
+        .value {
+          color: #2d2d2d;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

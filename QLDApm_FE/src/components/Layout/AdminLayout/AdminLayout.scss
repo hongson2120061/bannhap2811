@@ -1,0 +1,19 @@
+.AdminLayout {
+    @media only screen and (max-width: 766px) {
+        .ant-layout {
+            .ant-layout-header {
+                &>div {
+                    &:last-child {
+                        &>svg {
+                            display: none;
+                        }
+
+                        &>span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

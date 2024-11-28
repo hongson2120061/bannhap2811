@@ -1,0 +1,193 @@
+.UserFooter {
+  position: relative;
+  margin-top: 50px;
+
+  .footer-background {
+    width: 100vw;
+    height: 460px;
+    margin-left: calc(50% - 50vw);
+    background-color: #001529;
+  }
+
+  .footer-wrapper {
+    color: #ffffff; // Màu chữ
+    width: 100%;
+    padding: 40px 0; // Padding trên và dưới
+    position: absolute; // Đảm bảo footer nằm chính xác
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    box-sizing: border-box; // Đảm bảo padding không ảnh hưởng đến width
+
+    .footer-container {
+      width: 100%;
+      margin: 0;
+      box-sizing: border-box; // Đảm bảo padding không ảnh hưởng đến width
+
+      .support-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .support-text {
+          flex: 1;
+          text-align: center;
+
+          h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+
+          p {
+            font-size: 16px;
+          }
+        }
+
+        .support-input {
+          flex: 1;
+          text-align: center;
+        }
+
+        .ant-input-search {
+          width: 80%; // Giảm chiều rộng ô tìm kiếm
+        }
+      }
+
+      .about-section {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        >div {
+          flex: 1;
+          margin-right: 40px;
+
+          &>div {
+            margin-top: 10px;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+          }
+
+          p,
+          ul {
+            font-size: 14px;
+          }
+
+          ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+              margin-bottom: 8px;
+
+              a {
+                color: #ffffff;
+
+                &:hover {
+                  color: var(--COLOR-primary);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .information {
+        display: flex; // Sử dụng flexbox để căn chỉnh
+        justify-content: space-between; // Căn lề giữa
+        align-items: center; // Căn giữa theo chiều dọc
+        margin-top: 30px;
+
+        p {
+          font-size: 14px;
+          margin: 0; // Bỏ margin để căn chỉnh tốt hơn
+          padding-left: 20px; // Thêm khoảng cách bên trái
+        }
+
+        .social-icons {
+          display: flex; // Sử dụng flexbox cho các icon xã hội
+          margin-top: 10px;
+          padding-right: 20px; // Thêm khoảng cách bên phải
+
+          .anticon {
+            font-size: 24px;
+            margin: 0 10px; // Khoảng cách giữa các icon
+            color: #ffffff;
+
+            &:hover {
+              color: var(--COLOR-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 578px) and (max-width: 766px) {
+  .UserFooter {
+    margin: 0 -30px;
+    padding: 20px 0; // Giảm padding cho màn hình nhỏ
+    height: auto; // Chiều cao tự động cho footer nhỏ hơn
+
+    .footer-container {
+      padding: 10px; // Giảm padding bên trong
+    }
+
+    .support-section {
+      flex-direction: column; // Chuyển thành cột cho màn hình nhỏ
+      align-items: center; // Căn giữa
+    }
+
+    .about-section {
+      flex-direction: column; // Chuyển thành cột cho màn hình nhỏ
+      margin-bottom: 20px; // Giảm khoảng cách
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .UserFooter {
+    padding: 30px 0; // Padding điều chỉnh cho màn hình trung bình
+    height: auto; // Chiều cao tự động cho footer
+
+    .footer-container {
+      padding: 15px; // Padding điều chỉnh
+    }
+
+    .support-section {
+      flex-direction: row; // Quay lại hàng cho màn hình lớn hơn
+    }
+
+    .about-section {
+      flex-direction: row; // Quay lại hàng cho màn hình lớn hơn
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .UserFooter {
+    margin: 0 -60px;
+  }
+}
+
+@media only screen and (max-width: 577px) {
+  .UserFooter {
+    margin: 0 -15px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1468px) {
+  .UserFooter {
+    margin: 0 -100px;
+  }
+}

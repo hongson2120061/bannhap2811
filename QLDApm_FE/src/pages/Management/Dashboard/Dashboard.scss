@@ -1,0 +1,299 @@
+.dashboard {
+  height: calc(100vh - 100px - 48px - 48px);
+  overflow: auto;
+
+  .top-card-container {
+    display: flex;
+    gap: 30px;
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      align-items: center;
+      // width: 100%;
+      flex-grow: 1;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+      height: 130px;
+      display: flex;
+      @media (max-width: 1200px) {
+        flex: 1 1 calc(50% - 20px);
+      }
+      @media (max-width: 768px) {
+        flex: 1 1 calc(100% - 20px);
+      }
+
+      .trend {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        gap: 5px;
+
+        .trend-icon {
+          width: 10px;
+          height: 10px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .text {
+          color: #4a4a4a;
+        }
+
+        .positive {
+          color: #1eb564;
+        }
+
+        .negative {
+          color: #ff0000;
+        }
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 100px;
+      }
+
+      .total_orders {
+        background-color: #c3f4f0;
+      }
+
+      .total_delivered {
+        background-color: #fff5d9;
+      }
+
+      .total_revenue {
+        background-color: #d9f8ff;
+      }
+
+      .total_cancelled {
+        background-color: #ffd9d9;
+      }
+
+      .text-container {
+        .header {
+          color: #718ebf;
+          font-size: 17px;
+          font-weight: 400;
+        }
+
+        .value {
+          color: #2d2d2d;
+          font-size: 28px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .main-section {
+    margin-top: 30px;
+    display: flex;
+    @media (max-width: 1490px) {
+      flex-direction: column;
+    }
+
+    gap: 29px;
+    height: 100%;
+
+    .order-list-container {
+      min-width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .header {
+        font-size: 24px;
+        font-weight: 600;
+        color: #343c6a;
+      }
+      .order-list {
+        height: 100%;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 5px;
+        scroll-snap-type: y mandatory;
+        gap: 20px;
+
+        @media (max-width: 1490px) {
+          flex-direction: row;
+          scroll-snap-type: x mandatory;
+        }
+        .card {
+          padding: 20px;
+          scroll-snap-align: start;
+          @media (max-width: 1490px) {
+            scroll-snap-align: center;
+          }
+          background-color: white;
+          border-radius: 10px;
+          min-width: 350px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          transition: all 0.3s ease;
+          &:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            cursor: pointer;
+          }
+
+          &:active {
+            transform: scale(0.98);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+          }
+          .card-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .order-id {
+              display: flex;
+              align-items: center;
+              color: #2d2d2d;
+              gap: 5px;
+
+              p {
+                font-size: 14px;
+                font-weight: 600;
+              }
+            }
+
+            .order_status {
+              width: 120px;
+              height: 30px;
+              border-radius: 5px;
+              font-size: 11px;
+              font-weight: 600;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .Cancelled {
+              background-color: #fce4da;
+              color: #e34301;
+            }
+
+            .Delayed {
+              background-color: #fff5d9;
+              color: #d1a017;
+            }
+
+            .Completed {
+              background-color: #dafcdd;
+              color: #1f982a;
+            }
+          }
+
+          .card-title {
+            align-self: flex-start;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d2d2d;
+
+            h1 {
+              font-size: 24px;
+              font-weight: 700;
+              color: #2d2d2d;
+            }
+
+            span {
+              color: #718ebf;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            }
+          }
+
+          .card-footer {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            .address-container {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+
+              .address-content {
+                font-size: 12px;
+                color: #2d2d2d;
+
+                h3 {
+                  font-weight: 400;
+                  font-size: 14px;
+                  color: #718ebf;
+                }
+
+                p {
+                  font-weight: 600;
+                  font-size: 14px;
+                  color: #27272a;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.copy-container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.copy-icon {
+  color: #8ba3cb;
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.copy-icon:active {
+  color: #4caf50;
+  scale: 1.2;
+}
+
+.copy-feedback {
+  visibility: hidden;
+  opacity: 0;
+  margin-left: 8px;
+  color: #4caf50;
+  font-size: 12px;
+  font-weight: bold;
+  transition:
+    visibility 0s,
+    opacity 0.3s ease;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.copy-icon:active + .copy-feedback {
+  visibility: visible;
+  opacity: 1;
+}

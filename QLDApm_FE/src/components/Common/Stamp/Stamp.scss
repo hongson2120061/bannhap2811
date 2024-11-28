@@ -1,0 +1,49 @@
+.stamp {
+    position: absolute;
+    right: 0;
+    transform: rotate(12 deg);
+    color: #555;
+    font-weight: 700;
+    border: 0.25rem solid #555;
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    text-transform: uppercase;
+    font-family: "Courier";
+    mask-image: url("../../../assets/images/grunge.png");
+    mask-size: 944px 604px;
+    mix-blend-mode: multiply;
+}
+
+.stamp.is-starter {
+    color: #0a9928;
+    border: 0.4rem solid #0a9928;
+    mask-position: 30rem 1rem;
+    transform: rotate(-10deg);
+    border-radius: 0.3rem;
+}
+
+.stamp.is-dessert {
+    color: #d23;
+    border: 0.5rem double #d23;
+    transform: rotate(-10deg);
+    mask-position: 10rem 3rem;
+    font-size: 1.6rem;
+    border-radius: 0.8rem;
+}
+
+.stamp.is-drinks {
+    color: #506cca;
+    border: 0.4rem solid #506cca;
+    transform: rotate(-10deg);
+    font-size: 1.3rem;
+    font-family: "Open sans", Helvetica, Arial, sans-serif;
+    border-radius: 0;
+}
+
+.stamp.is-main {
+    color: rgb(221, 124, 21);
+    border: 0.5rem double rgb(221, 124, 21);
+    transform: rotate(-10deg);
+    mask-position: 10rem 1rem;
+    font-size: 1.6rem;
+}

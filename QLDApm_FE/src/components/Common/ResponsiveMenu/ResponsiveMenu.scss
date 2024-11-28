@@ -1,0 +1,42 @@
+.ResponsiveMenu {
+    .notification-content {
+        &>img {
+            width: 240px;
+            height: 240px;
+        }
+
+        &>p {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.modal-check {
+    &>div {
+        .ant-modal-content {
+            .ant-modal-body {
+                #check-d {
+                    text-align: justify;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                }
+
+                #quantity {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-top: 10px;
+
+                    p {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

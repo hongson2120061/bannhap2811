@@ -1,0 +1,44 @@
+.AdminHeader {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+
+    &>div {
+        &:first-child {
+            display: flex;
+            align-items: center;
+
+            &>p {
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+        }
+
+        &:last-child {
+            display: flex;
+            align-items: center;
+
+            &>span {
+                margin-left: 10px;
+            }
+
+            &>div {
+                margin-left: 60px;
+                margin-right: 40px;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.8;
+                }
+            }
+
+            .btn-mail,
+            .btn-noti {
+                &:hover {
+                    opacity: 0.6;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
